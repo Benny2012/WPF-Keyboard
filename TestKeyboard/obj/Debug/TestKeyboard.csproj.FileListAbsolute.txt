@@ -1,0 +1,56 @@
+c:\users\benny\documents\visual studio 2010\Projects\TestKeyboard\TestKeyboard\obj\Debug\ResolveAssemblyReference.cache
+c:\users\benny\documents\visual studio 2010\Projects\TestKeyboard\TestKeyboard\obj\Debug\EditTask.baml
+c:\users\benny\documents\visual studio 2010\Projects\TestKeyboard\TestKeyboard\obj\Debug\EditTaskView.baml
+c:\users\benny\documents\visual studio 2010\Projects\TestKeyboard\TestKeyboard\obj\Debug\Keyboard\Caret.baml
+c:\users\benny\documents\visual studio 2010\Projects\TestKeyboard\TestKeyboard\obj\Debug\Keyboard\CustomKeyboard.baml
+c:\users\benny\documents\visual studio 2010\Projects\TestKeyboard\TestKeyboard\obj\Debug\Keyboard\KeyboardController.baml
+c:\users\benny\documents\visual studio 2010\Projects\TestKeyboard\TestKeyboard\obj\Debug\KeyboardSample.baml
+c:\users\benny\documents\visual studio 2010\Projects\TestKeyboard\TestKeyboard\obj\Debug\App.baml
+c:\users\benny\documents\visual studio 2010\Projects\TestKeyboard\TestKeyboard\obj\Debug\EditTask.g.cs
+c:\users\benny\documents\visual studio 2010\Projects\TestKeyboard\TestKeyboard\obj\Debug\EditTaskView.g.cs
+c:\users\benny\documents\visual studio 2010\Projects\TestKeyboard\TestKeyboard\obj\Debug\Keyboard\Caret.g.cs
+c:\users\benny\documents\visual studio 2010\Projects\TestKeyboard\TestKeyboard\obj\Debug\Keyboard\CustomKeyboard.g.cs
+c:\users\benny\documents\visual studio 2010\Projects\TestKeyboard\TestKeyboard\obj\Debug\Keyboard\KeyboardController.g.cs
+c:\users\benny\documents\visual studio 2010\Projects\TestKeyboard\TestKeyboard\obj\Debug\KeyboardSample.g.cs
+c:\users\benny\documents\visual studio 2010\Projects\TestKeyboard\TestKeyboard\obj\Debug\App.g.cs
+c:\users\benny\documents\visual studio 2010\Projects\TestKeyboard\TestKeyboard\obj\Debug\TestKeyboard_Content.g.cs
+c:\users\benny\documents\visual studio 2010\Projects\TestKeyboard\TestKeyboard\obj\Debug\TestKeyboard_MarkupCompile.cache
+c:\users\benny\documents\visual studio 2010\Projects\TestKeyboard\TestKeyboard\obj\Debug\TestKeyboard.g.resources
+c:\users\benny\documents\visual studio 2010\Projects\TestKeyboard\TestKeyboard\obj\Debug\TestKeyboard.Properties.Resources.resources
+c:\users\benny\documents\visual studio 2010\Projects\TestKeyboard\TestKeyboard\obj\Debug\GenerateResource.read.1.tlog
+c:\users\benny\documents\visual studio 2010\Projects\TestKeyboard\TestKeyboard\obj\Debug\GenerateResource.write.1.tlog
+c:\users\benny\documents\visual studio 2010\Projects\TestKeyboard\TestKeyboard\bin\Debug\Resources\icon.png
+c:\users\benny\documents\visual studio 2010\Projects\TestKeyboard\TestKeyboard\bin\Debug\TestKeyboard.xml
+c:\users\benny\documents\visual studio 2010\Projects\TestKeyboard\TestKeyboard\bin\Debug\TestKeyboard.exe
+c:\users\benny\documents\visual studio 2010\Projects\TestKeyboard\TestKeyboard\bin\Debug\TestKeyboard.pdb
+c:\users\benny\documents\visual studio 2010\Projects\TestKeyboard\TestKeyboard\obj\Debug\TestKeyboard.exe
+c:\users\benny\documents\visual studio 2010\Projects\TestKeyboard\TestKeyboard\obj\Debug\TestKeyboard.pdb
+c:\users\benny\documents\visual studio 2010\Projects\TestKeyboard\TestKeyboard\obj\Debug\Resources\CustomStyles.baml
+J:\Bachelor\Alex\TestKeyboard\TestKeyboard\obj\Debug\TestKeyboard.exe
+J:\Bachelor\Alex\TestKeyboard\TestKeyboard\obj\Debug\TestKeyboard.pdb
+J:\Bachelor\Alex\TestKeyboard\TestKeyboard\bin\Debug\Resources\icon.png
+J:\Bachelor\Alex\TestKeyboard\TestKeyboard\bin\Debug\TestKeyboard.xml
+J:\Bachelor\Alex\TestKeyboard\TestKeyboard\bin\Debug\TestKeyboard.exe
+J:\Bachelor\Alex\TestKeyboard\TestKeyboard\bin\Debug\TestKeyboard.pdb
+J:\Bachelor\Alex\TestKeyboard\TestKeyboard\obj\Debug\ResolveAssemblyReference.cache
+J:\Bachelor\Alex\TestKeyboard\TestKeyboard\obj\Debug\EditTask.baml
+J:\Bachelor\Alex\TestKeyboard\TestKeyboard\obj\Debug\EditTaskView.baml
+J:\Bachelor\Alex\TestKeyboard\TestKeyboard\obj\Debug\Keyboard\Caret.baml
+J:\Bachelor\Alex\TestKeyboard\TestKeyboard\obj\Debug\Keyboard\CustomKeyboard.baml
+J:\Bachelor\Alex\TestKeyboard\TestKeyboard\obj\Debug\Keyboard\KeyboardController.baml
+J:\Bachelor\Alex\TestKeyboard\TestKeyboard\obj\Debug\KeyboardSample.baml
+J:\Bachelor\Alex\TestKeyboard\TestKeyboard\obj\Debug\Resources\CustomStyles.baml
+J:\Bachelor\Alex\TestKeyboard\TestKeyboard\obj\Debug\App.baml
+J:\Bachelor\Alex\TestKeyboard\TestKeyboard\obj\Debug\EditTask.g.cs
+J:\Bachelor\Alex\TestKeyboard\TestKeyboard\obj\Debug\EditTaskView.g.cs
+J:\Bachelor\Alex\TestKeyboard\TestKeyboard\obj\Debug\Keyboard\Caret.g.cs
+J:\Bachelor\Alex\TestKeyboard\TestKeyboard\obj\Debug\Keyboard\CustomKeyboard.g.cs
+J:\Bachelor\Alex\TestKeyboard\TestKeyboard\obj\Debug\Keyboard\KeyboardController.g.cs
+J:\Bachelor\Alex\TestKeyboard\TestKeyboard\obj\Debug\KeyboardSample.g.cs
+J:\Bachelor\Alex\TestKeyboard\TestKeyboard\obj\Debug\App.g.cs
+J:\Bachelor\Alex\TestKeyboard\TestKeyboard\obj\Debug\TestKeyboard_Content.g.cs
+J:\Bachelor\Alex\TestKeyboard\TestKeyboard\obj\Debug\TestKeyboard_MarkupCompile.cache
+J:\Bachelor\Alex\TestKeyboard\TestKeyboard\obj\Debug\TestKeyboard.g.resources
+J:\Bachelor\Alex\TestKeyboard\TestKeyboard\obj\Debug\TestKeyboard.Properties.Resources.resources
+J:\Bachelor\Alex\TestKeyboard\TestKeyboard\obj\Debug\GenerateResource.read.1.tlog
+J:\Bachelor\Alex\TestKeyboard\TestKeyboard\obj\Debug\GenerateResource.write.1.tlog

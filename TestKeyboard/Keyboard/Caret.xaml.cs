@@ -97,8 +97,14 @@ namespace MuliTask.Keyboard
             {
                 int rowSpan = panel.RowDefinitions.Count;
                 int coloumnSpan = panel.ColumnDefinitions.Count;
-                Grid.SetRowSpan(this, rowSpan);
-                Grid.SetColumnSpan(this, coloumnSpan);
+                if (rowSpan > 0)
+                {
+                    Grid.SetRowSpan(this, rowSpan);
+                }
+                if (coloumnSpan > 0)
+                {
+                    Grid.SetColumnSpan(this, coloumnSpan);
+                }
             }
         }
 

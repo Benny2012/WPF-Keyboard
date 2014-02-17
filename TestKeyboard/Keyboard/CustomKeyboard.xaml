@@ -10,6 +10,32 @@
     <UserControl.Resources>
         <SolidColorBrush x:Key="KeyBackground" Color="#302F37" Opacity="0.9"/>
         <SolidColorBrush x:Key="ButtonBackground" Color="#1D1C21" Opacity="0.9"/>
+
+        <Style x:Name="ButtonStyle" TargetType="s:SurfaceButton">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="s:SurfaceButton">
+                        <Border x:Name="ButtonBorder"
+                            CornerRadius="5" 
+                            Background="{TemplateBinding Background}">
+                            <ContentPresenter 
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center">
+                                <ContentPresenter.RenderTransform>
+                                    <RotateTransform Angle="-0.5"/>
+                                </ContentPresenter.RenderTransform>
+                            </ContentPresenter>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsPressed" Value="true">
+                                <Setter Property="Opacity" Value="0.9"/>
+                                <Setter Property="Background" Value="#59AEBB" TargetName="ButtonBorder" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
     </UserControl.Resources>
 
  

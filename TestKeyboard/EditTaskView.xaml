@@ -16,15 +16,13 @@
                 <RowDefinition Height="1.2*"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-            </Grid.ColumnDefinitions>
+            
 
             <Label Content="Task: " Grid.Row="0" Grid.Column="0" Margin="10,0,0,0" Foreground="Black"/>
-            <s:SurfaceTextBox Name="SurfaceTextBox" Text="Hallo" Grid.Row="0" Grid.RowSpan="3" Grid.ColumnSpan="3" Focusable="False" Margin="10, 25, 10, 5" FontSize="22"
+            <s:SurfaceTextBox Name="SurfaceTextBox" Text="Hallo" Grid.Row="0" Grid.RowSpan="3" Focusable="False" Margin="10, 25, 10, 5" FontSize="22"
                               ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Auto" TextWrapping="WrapWithOverflow" TouchUp="TextBox_TouchUp"/>
+
+            
 
         </Grid>
     </Grid>

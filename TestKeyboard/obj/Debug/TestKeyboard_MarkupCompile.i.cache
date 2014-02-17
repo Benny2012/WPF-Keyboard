@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-J:\Bachelor\Alex\TestKeyboard\TestKeyboard\obj\Debug\
+D:\Programme\GitHub\WPF-Keyboard\TestKeyboard\obj\Debug\
 TestKeyboard
 none
 false
 DEBUG;TRACE
-J:\Bachelor\Alex\TestKeyboard\TestKeyboard\App.xaml
-7-546540877
+D:\Programme\GitHub\WPF-Keyboard\TestKeyboard\App.xaml
+6-2010594921
 2-2040864867
 11991370387
 152103913890
-EditTask.xaml;EditTaskView.xaml;Keyboard\Caret.xaml;Keyboard\CustomKeyboard.xaml;Keyboard\KeyboardController.xaml;KeyboardSample.xaml;Resources\CustomStyles.xaml;
+EditTask.xaml;EditTaskView.xaml;Keyboard\Caret.xaml;Keyboard\CustomKeyboard.xaml;Keyboard\KeyboardController.xaml;KeyboardSample.xaml;
 
 False
 

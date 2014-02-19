@@ -43,7 +43,7 @@ namespace MuliTask.Keyboard
         private Grid controllerGrid;
 
         
-        public KeyboardController(UIElement focusedElement)
+        /*public KeyboardController()
         {
             InitializeComponent();
 
@@ -51,16 +51,24 @@ namespace MuliTask.Keyboard
             this.focusedElement = focusedElement as TextBox;
             registerEventOnElement();
             parentPanel = findParentPanel(focusedElement);
-            initAndSetKeyboard();
-            initCaret(parentPanel);
+            //initAndSetKeyboard();
+            //initCaret(parentPanel);
 
-            keyboard.setCustomKeyboardListener(this);
+            this.CustomKeyboard.setCustomKeyboardListener(this);
+        }*/
+
+        public KeyboardController()
+        {
+            InitializeComponent();
+
+            controllerGrid = this.MainGrid;
+            this.CustomKeyboard.setCustomKeyboardListener(this);
         }
 
         private void initCaret(Panel relativeTo)
         {
             caret = new Caret(relativeTo);
-            caret.update(focusedElement);
+            caret.update(focusedElement, "normal");
         }
 
         private void initAndSetKeyboard()
@@ -74,17 +82,24 @@ namespace MuliTask.Keyboard
             this.listener = listener;
         }
 
-        public void setNewFocusedElement(TextBox focusedElement)
+        public void setFocusedElement(UIElement focusedElement)
         {
             removeRegisteredEventsFromElement();
-            this.focusedElement = focusedElement;
+            this.focusedElement = focusedElement as TextBox;
             if (this.focusedElement != null)
             {
                 registerEventOnElement();
                 parentPanel = findParentPanel(focusedElement);
-                caret.setNewRelativeTo(parentPanel);
+                if (caret == null)
+                {
+                    initCaret(parentPanel);
+                }
+                else
+                {
+                    caret.setNewRelativeTo(parentPanel);
+                } 
             }
-            caret.update(focusedElement);
+            caret.update(this.focusedElement, "normal");
         }
 
         /*
@@ -173,7 +188,7 @@ namespace MuliTask.Keyboard
                 focusedElement.Text = focusedElement.Text.Insert(caretPosition, key);
                 focusedElement.CaretIndex = caretPosition + 1;
 
-                caret.update(focusedElement);
+                caret.update(focusedElement, "normal");
             }   
             //send message to listener
             if (listener != null)
@@ -203,7 +218,7 @@ namespace MuliTask.Keyboard
                     focusedElement.CaretIndex = caretPosition - 1;
                 }
 
-                caret.update(focusedElement);
+                caret.update(focusedElement, "normal");
             }
             //send message to listener
             if (listener != null)
@@ -225,7 +240,7 @@ namespace MuliTask.Keyboard
                 {
                     focusedElement.CaretIndex += arrowIndex;
                 }
-                caret.update(focusedElement);
+                caret.update(focusedElement, "normal");
             }
             //send message to listener
             if (listener != null)
@@ -237,19 +252,19 @@ namespace MuliTask.Keyboard
 
         private void TextElement_TouchUp(object sender, TouchEventArgs e)
         {
-            caret.update(focusedElement);
+            caret.update(focusedElement, "normal");
         }
 
 
         private void TextElement_Loaded(object sender, RoutedEventArgs e)
         {
             focusedElement.CaretIndex = focusedElement.Text.Length;
-            caret.update(focusedElement);
+            caret.update(focusedElement, "normal");
         }
 
         private void TextElement_ScrollChanged(object sender, ScrollChangedEventArgs e)
         {
-            caret.update(focusedElement);
+            caret.update(focusedElement, "scroll");
         }
     }
 

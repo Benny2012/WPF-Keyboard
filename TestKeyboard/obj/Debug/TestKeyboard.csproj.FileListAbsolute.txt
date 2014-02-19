@@ -81,3 +81,5 @@ D:\Programme\GitHub\WPF-Keyboard\TestKeyboard\obj\Debug\TestKeyboard.g.resources
 D:\Programme\GitHub\WPF-Keyboard\TestKeyboard\obj\Debug\TestKeyboard.Properties.Resources.resources
 D:\Programme\GitHub\WPF-Keyboard\TestKeyboard\obj\Debug\GenerateResource.read.1.tlog
 D:\Programme\GitHub\WPF-Keyboard\TestKeyboard\obj\Debug\GenerateResource.write.1.tlog
+D:\Programme\GitHub\WPF-Keyboard\TestKeyboard\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\Programme\GitHub\WPF-Keyboard\TestKeyboard\obj\Debug\TestKeyboard_MarkupCompile.lref

@@ -2,10 +2,12 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:custom="clr-namespace:MuliTask.Keyboard"
              mc:Ignorable="d" 
              d:DesignHeight="230" d:DesignWidth="715">
     
     <Grid Name="MainGrid" MinWidth="350" MinHeight="200">
+        <custom:CustomKeyboard x:Name="CustomKeyboard"/>
     </Grid>
 </UserControl>

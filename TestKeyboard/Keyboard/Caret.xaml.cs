@@ -73,11 +73,11 @@ namespace MuliTask.Keyboard
         /*
          * updates caret if necessary (inits placing caret in the rigth position or hides caret)
          */
-        public void update(TextBox focusedElement)
+        public void update(TextBox focusedElement, string type)
         {
             if (focusedElement != null)
             {
-                placeCaret(focusedElement);
+                placeCaret(focusedElement, type);
             }
             else
             {
@@ -114,12 +114,12 @@ namespace MuliTask.Keyboard
          * focusedElement: TextBox where caret shold be placed (must be Textbox because property 'caretIndex' is needed)
          * 
          */
-        private void placeCaret(TextBox focusedElement)
+        private void placeCaret(TextBox focusedElement, string type)
         {
             int caretPosition = focusedElement.CaretIndex;
             Point positionOfFocusedElement = focusedElement.TranslatePoint(new Point(0, 0), relativeTo);
             Rect caretPositionRect = focusedElement.GetRectFromCharacterIndex(caretPosition);
-            if (!caretPositionRect.IsEmpty && isCaretVisible(focusedElement, caretPositionRect))
+            if (!caretPositionRect.IsEmpty && isCaretVisible(focusedElement, caretPositionRect, type))
             {
                 setCaretSize(caretPositionRect.Height);
                 setCaretColor(focusedElement.Foreground);
@@ -155,9 +155,21 @@ namespace MuliTask.Keyboard
         /*
          * checks if current caret-position is visible
          */
-        private bool isCaretVisible(TextBox focusedElement, Rect caretPositionRect)
+        private bool isCaretVisible(TextBox focusedElement, Rect caretPositionRect, string type)
         {
-            return caretPositionRect.Y >= 0 && caretPositionRect.Y <= (focusedElement.ActualHeight - caretPositionRect.Height);
+            if (!(caretPositionRect.Y >= 0 && caretPositionRect.Y <= (focusedElement.ActualHeight - caretPositionRect.Height)))
+            {
+                if (type != "scroll")
+                {
+                    focusedElement.ScrollToLine(focusedElement.GetLineIndexFromCharacterIndex(focusedElement.CaretIndex));
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            return true;
         }
 
         private void startBlinking()

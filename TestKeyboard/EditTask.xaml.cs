@@ -39,7 +39,7 @@ namespace MuliTask.Tasks
             initAndSetView();
             initAndSetKeyboard();
             //optional
-            keyboardController.setCustomKeyboardListener(this);
+            this.CustomKeyboardController.setCustomKeyboardListener(this);
             taskView.setOptionaElementChangedListener(this);
         }
 
@@ -57,9 +57,10 @@ namespace MuliTask.Tasks
          */
         private void initAndSetKeyboard()
         {
-            keyboardController = new KeyboardController(focusedElement);
+            /*keyboardController = new KeyboardController(focusedElement);
             controllerGrid.Children.Add(keyboardController);
-            Grid.SetRow(keyboardController, 1);
+            Grid.SetRow(keyboardController, 1);*/
+            this.CustomKeyboardController.setFocusedElement(focusedElement);
         }
 
         /*
@@ -85,7 +86,7 @@ namespace MuliTask.Tasks
          */
         public void onfocusedElementChanged()
         {
-            keyboardController.setNewFocusedElement(taskView.getFocusedElement());
+            this.CustomKeyboardController.setFocusedElement(taskView.getFocusedElement());
         }
     }
 }

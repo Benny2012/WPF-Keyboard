@@ -6,9 +6,9 @@ instructions.
 -->
 <ss:ApplicationInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ss="http://schemas.microsoft.com/Surface/2007/ApplicationMetadata">
   <Application>
-    <Title>TestKeyboard</Title>
-    <Description>TestKeyboard</Description>
-    <ExecutableFile>TestKeyboard.exe</ExecutableFile>
+    <Title>WPFKeyboard</Title>
+    <Description>WPFKeyboard</Description>
+    <ExecutableFile>WPFKeyboard.exe</ExecutableFile>
     <Arguments>
     </Arguments>
     <IconImageFile>Resources\icon.png</IconImageFile>

@@ -13,7 +13,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
 
-namespace MuliTask.Keyboard
+namespace WPFKeyboard.Keyboard
 {
     /// <summary>
     /// Interaktionslogik für Caret.xaml

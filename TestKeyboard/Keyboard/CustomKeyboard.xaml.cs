@@ -15,7 +15,7 @@ using Microsoft.Surface.Presentation.Controls;
 using Microsoft.Surface;
 using System.Windows.Threading;
 
-namespace MuliTask.Keyboard
+namespace WPFKeyboard.Keyboard
 {
     /// <summary>
     /// Interaktionslogik für UserControl1.xaml

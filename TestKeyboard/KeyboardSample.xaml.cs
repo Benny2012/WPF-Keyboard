@@ -15,9 +15,9 @@ using Microsoft.Surface;
 using Microsoft.Surface.Presentation;
 using Microsoft.Surface.Presentation.Controls;
 using Microsoft.Surface.Presentation.Input;
-using MuliTask.Tasks;
+using WPFKeyboard.Tasks;
 
-namespace TestKeyboard
+namespace WPFKeyboard
 {
     /// <summary>
     /// Interaction logic for SurfaceWindow1.xaml
@@ -31,13 +31,13 @@ namespace TestKeyboard
         {
             InitializeComponent();
 
-            initTestKeyboard();
+            initWPFKeyboard();
 
             // Add handlers for window availability events
             AddWindowAvailabilityHandlers();
         }
 
-        private void initTestKeyboard()
+        private void initWPFKeyboard()
         {
             EditTask test = new EditTask();
             this.MainGrid.Children.Add(test);

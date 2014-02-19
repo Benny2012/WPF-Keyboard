@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestKeyboard", "TestKeyboard\TestKeyboard.csproj", "{6F9A4470-BFAF-4FD8-AF3B-AC2E629B4CBB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFKeyboard", "TestKeyboard\WPFKeyboard.csproj", "{6F9A4470-BFAF-4FD8-AF3B-AC2E629B4CBB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -11,10 +11,10 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using MuliTask.Keyboard;
+using WPFKeyboard.Keyboard;
 using Microsoft.Surface.Presentation.Controls;
 
-namespace MuliTask.Tasks
+namespace WPFKeyboard.Tasks
 {
     /// <summary>
     /// Interaktionslogik für EditTask.xaml

@@ -1,8 +1,8 @@
-﻿<s:SurfaceWindow x:Class="TestKeyboard.KeyboardSample"
+﻿<s:SurfaceWindow x:Class="WPFKeyboard.KeyboardSample"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:s="http://schemas.microsoft.com/surface/2008"
-    Title="TestKeyboard"
+    Title="WPFKeyboard"
     Width="750"
     Height="750"
     Icon="Resources/icon.png">

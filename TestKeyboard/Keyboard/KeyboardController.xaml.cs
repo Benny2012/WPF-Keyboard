@@ -12,9 +12,9 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Microsoft.Surface.Presentation.Controls;
-using MuliTask.Tasks;
+using WPFKeyboard.Tasks;
 
-namespace MuliTask.Keyboard
+namespace WPFKeyboard.Keyboard
 {
     /// <summary>
     /// Interaktionslogik für KeyboardController.xaml ---DEPRICATED---

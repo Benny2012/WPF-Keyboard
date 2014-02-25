@@ -64,6 +64,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Sample\KeyboardSample.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Keyboard\Caret.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -76,7 +80,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="KeyboardSample.xaml">
+    <Page Include="SampleApp.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -90,6 +94,9 @@
     <Compile Include="EditTaskView.xaml.cs">
       <DependentUpon>EditTaskView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Sample\KeyboardSample.xaml.cs">
+      <DependentUpon>KeyboardSample.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Keyboard\Caret.xaml.cs">
       <DependentUpon>Caret.xaml</DependentUpon>
     </Compile>
@@ -99,8 +106,8 @@
     <Compile Include="Keyboard\KeyboardController.xaml.cs">
       <DependentUpon>KeyboardController.xaml</DependentUpon>
     </Compile>
-    <Compile Include="KeyboardSample.xaml.cs">
-      <DependentUpon>KeyboardSample.xaml</DependentUpon>
+    <Compile Include="SampleApp.xaml.cs">
+      <DependentUpon>SampleApp.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>

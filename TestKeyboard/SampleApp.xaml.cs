@@ -22,12 +22,12 @@ namespace WPFKeyboard
     /// <summary>
     /// Interaction logic for SurfaceWindow1.xaml
     /// </summary>
-    public partial class KeyboardSample : SurfaceWindow
+    public partial class SampleApp : SurfaceWindow
     {
         /// <summary>
         /// Default constructor.
         /// </summary>
-        public KeyboardSample()
+        public SampleApp()
         {
             InitializeComponent();
 
@@ -39,8 +39,9 @@ namespace WPFKeyboard
 
         private void initWPFKeyboard()
         {
-            EditTask test = new EditTask();
-            this.MainGrid.Children.Add(test);
+            /*EditTask test = new EditTask();
+            this.MainGrid.Children.Add(test);*/
+
         }
 
         /// <summary>

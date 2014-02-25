@@ -5,7 +5,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
-             d:DesignHeight="230" d:DesignWidth="715">
+             Height="230" Width="715">
     
     <UserControl.Resources>
         <SolidColorBrush x:Key="KeyBackground" Color="#302F37" Opacity="0.9"/>
@@ -62,10 +62,14 @@
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
-
-            <Grid.Effect>
+            
+            <!-- trick for proper dropshadow -> if no shadow is needed remove whole Grid -->
+            <Grid Grid.Row="0" Grid.Column="0" Grid.RowSpan="4" Grid.ColumnSpan="13" Background="DarkGray">
+                <Grid.Effect>
                     <DropShadowEffect BlurRadius="10" Color="Black" Opacity="0.5" ShadowDepth="5" Direction="0"/>
-            </Grid.Effect>
+                </Grid.Effect>
+            </Grid>
+            
         
                 <!-- one Rectangle and Surfacebutton make one "complete" Button-->
 

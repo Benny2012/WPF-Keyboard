@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\Programme\GitHub\WPF-Keyboard\TestKeyboard\App.xaml
-6-2010594921
+7-742850627
 2-2040864867
-9412547262
+101382798881
 152103913890
-EditTask.xaml;EditTaskView.xaml;Keyboard\Caret.xaml;Keyboard\CustomKeyboard.xaml;Keyboard\KeyboardController.xaml;KeyboardSample.xaml;
+EditTask.xaml;EditTaskView.xaml;Sample\KeyboardSample.xaml;Keyboard\Caret.xaml;Keyboard\CustomKeyboard.xaml;Keyboard\KeyboardController.xaml;SampleApp.xaml;
 
 True
 

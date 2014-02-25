@@ -56,14 +56,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="EditTask.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="EditTaskView.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Page Include="Sample\KeyboardSample.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -87,12 +79,6 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="EditTask.xaml.cs">
-      <DependentUpon>EditTask.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="EditTaskView.xaml.cs">
-      <DependentUpon>EditTaskView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Sample\KeyboardSample.xaml.cs">
       <DependentUpon>KeyboardSample.xaml</DependentUpon>

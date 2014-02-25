@@ -12,7 +12,6 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Microsoft.Surface.Presentation.Controls;
-using WPFKeyboard.Tasks;
 
 namespace WPFKeyboard.Keyboard
 {

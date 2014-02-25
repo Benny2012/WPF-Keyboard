@@ -10,14 +10,8 @@
     Background="WhiteSmoke">
     
     <Grid Name="MainGrid" MinWidth="350" MinHeight="200" VerticalAlignment="Center">
-        <!--<Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="1.15*"/>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>-->
         
+        <!-- simple example with Textbox and keyboard -->
         <custom:KeyboardSample x:Name="KeyboardSample" />
 
     </Grid>

@@ -97,7 +97,14 @@ namespace WPFKeyboard.Keyboard
                 }
                 else
                 {
-                    changeLetterSize(buttons, smallLetters);
+                    if (areSmallLetters)
+                    {
+                        changeLetterSize(buttons, smallLetters);
+                    }
+                    else
+                    {
+                        changeLetterSize(buttons, bigLetters);
+                    }
                     toogleShiftVisibility();
                     pressedButton.Content = "&123";
                     areLetters = true;
@@ -183,7 +190,7 @@ namespace WPFKeyboard.Keyboard
             keyBoardController.keyPressed(pressedButton);
 
             //after shift was pressed -> letters go small automatically
-            if (!areSmallLetters)
+            if (!areSmallLetters && areLetters)
             {
                 changeLetterSize(getKeys(), smallLetters);
                 areSmallLetters = true;

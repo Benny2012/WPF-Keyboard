@@ -15,7 +15,6 @@ using Microsoft.Surface;
 using Microsoft.Surface.Presentation;
 using Microsoft.Surface.Presentation.Controls;
 using Microsoft.Surface.Presentation.Input;
-using WPFKeyboard.Tasks;
 
 namespace WPFKeyboard
 {
@@ -31,17 +30,8 @@ namespace WPFKeyboard
         {
             InitializeComponent();
 
-            initWPFKeyboard();
-
             // Add handlers for window availability events
             AddWindowAvailabilityHandlers();
-        }
-
-        private void initWPFKeyboard()
-        {
-            /*EditTask test = new EditTask();
-            this.MainGrid.Children.Add(test);*/
-
         }
 
         /// <summary>

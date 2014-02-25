@@ -3,12 +3,9 @@ D:\Programme\GitHub\WPF-Keyboard\TestKeyboard\bin\Debug\TestKeyboard.xml
 D:\Programme\GitHub\WPF-Keyboard\TestKeyboard\bin\Debug\WPFKeyboard.exe
 D:\Programme\GitHub\WPF-Keyboard\TestKeyboard\bin\Debug\WPFKeyboard.pdb
 D:\Programme\GitHub\WPF-Keyboard\TestKeyboard\obj\Debug\ResolveAssemblyReference.cache
-D:\Programme\GitHub\WPF-Keyboard\TestKeyboard\obj\Debug\EditTaskView.baml
 D:\Programme\GitHub\WPF-Keyboard\TestKeyboard\obj\Debug\Keyboard\Caret.baml
 D:\Programme\GitHub\WPF-Keyboard\TestKeyboard\obj\Debug\Keyboard\CustomKeyboard.baml
 D:\Programme\GitHub\WPF-Keyboard\TestKeyboard\obj\Debug\App.baml
-D:\Programme\GitHub\WPF-Keyboard\TestKeyboard\obj\Debug\EditTask.g.cs
-D:\Programme\GitHub\WPF-Keyboard\TestKeyboard\obj\Debug\EditTaskView.g.cs
 D:\Programme\GitHub\WPF-Keyboard\TestKeyboard\obj\Debug\Keyboard\Caret.g.cs
 D:\Programme\GitHub\WPF-Keyboard\TestKeyboard\obj\Debug\Keyboard\CustomKeyboard.g.cs
 D:\Programme\GitHub\WPF-Keyboard\TestKeyboard\obj\Debug\Keyboard\KeyboardController.g.cs
@@ -17,7 +14,6 @@ D:\Programme\GitHub\WPF-Keyboard\TestKeyboard\obj\Debug\WPFKeyboard_Content.g.cs
 D:\Programme\GitHub\WPF-Keyboard\TestKeyboard\obj\Debug\GeneratedInternalTypeHelper.g.cs
 D:\Programme\GitHub\WPF-Keyboard\TestKeyboard\obj\Debug\WPFKeyboard_MarkupCompile.cache
 D:\Programme\GitHub\WPF-Keyboard\TestKeyboard\obj\Debug\WPFKeyboard_MarkupCompile.lref
-D:\Programme\GitHub\WPF-Keyboard\TestKeyboard\obj\Debug\EditTask.baml
 D:\Programme\GitHub\WPF-Keyboard\TestKeyboard\obj\Debug\Keyboard\KeyboardController.baml
 D:\Programme\GitHub\WPF-Keyboard\TestKeyboard\obj\Debug\WPFKeyboard.g.resources
 D:\Programme\GitHub\WPF-Keyboard\TestKeyboard\obj\Debug\WPFKeyboard.exe

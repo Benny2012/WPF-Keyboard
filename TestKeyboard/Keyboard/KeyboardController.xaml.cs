@@ -41,21 +41,6 @@ namespace WPFKeyboard.Keyboard
 
         private Grid controllerGrid;
 
-        
-        /*public KeyboardController()
-        {
-            InitializeComponent();
-
-            controllerGrid = this.MainGrid;
-            this.focusedElement = focusedElement as TextBox;
-            registerEventOnElement();
-            parentPanel = findParentPanel(focusedElement);
-            //initAndSetKeyboard();
-            //initCaret(parentPanel);
-
-            this.CustomKeyboard.setCustomKeyboardListener(this);
-        }*/
-
         public KeyboardController()
         {
             InitializeComponent();
@@ -83,22 +68,32 @@ namespace WPFKeyboard.Keyboard
 
         public void setFocusedElement(UIElement focusedElement)
         {
-            removeRegisteredEventsFromElement();
-            this.focusedElement = focusedElement as TextBox;
-            if (this.focusedElement != null)
+            if (this.focusedElement == null && focusedElement as TextBox != null)
             {
-                registerEventOnElement();
-                parentPanel = findParentPanel(focusedElement);
-                if (caret == null)
-                {
-                    initCaret(parentPanel);
-                }
-                else
-                {
-                    caret.setNewRelativeTo(parentPanel);
-                } 
+                handleUpdateFocusedElement(focusedElement);
+            }
+            if (this.focusedElement != null && this.focusedElement != focusedElement as TextBox)
+            {
+                handleUpdateFocusedElement(focusedElement);
+                
             }
             caret.update(this.focusedElement, "normal");
+        }
+
+        private void handleUpdateFocusedElement(UIElement newFocusedElement)
+        {
+            removeRegisteredEventsFromElement();
+            this.focusedElement = newFocusedElement as TextBox;
+            registerEventOnElement();
+            parentPanel = findParentPanel(focusedElement);
+            if (caret == null)
+            {
+                initCaret(parentPanel);
+            }
+            else
+            {
+                caret.setNewRelativeTo(parentPanel);
+            } 
         }
 
         /*

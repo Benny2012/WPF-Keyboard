@@ -2,7 +2,6 @@ D:\Programme\GitHub\WPF-Keyboard\TestKeyboard\bin\Debug\Resources\icon.png
 D:\Programme\GitHub\WPF-Keyboard\TestKeyboard\bin\Debug\TestKeyboard.xml
 D:\Programme\GitHub\WPF-Keyboard\TestKeyboard\bin\Debug\WPFKeyboard.exe
 D:\Programme\GitHub\WPF-Keyboard\TestKeyboard\bin\Debug\WPFKeyboard.pdb
-D:\Programme\GitHub\WPF-Keyboard\TestKeyboard\obj\Debug\ResolveAssemblyReference.cache
 D:\Programme\GitHub\WPF-Keyboard\TestKeyboard\obj\Debug\Keyboard\Caret.baml
 D:\Programme\GitHub\WPF-Keyboard\TestKeyboard\obj\Debug\Keyboard\CustomKeyboard.baml
 D:\Programme\GitHub\WPF-Keyboard\TestKeyboard\obj\Debug\App.baml
@@ -22,3 +21,4 @@ D:\Programme\GitHub\WPF-Keyboard\TestKeyboard\obj\Debug\SampleApp.baml
 D:\Programme\GitHub\WPF-Keyboard\TestKeyboard\obj\Debug\SampleApp.g.cs
 D:\Programme\GitHub\WPF-Keyboard\TestKeyboard\obj\Debug\Sample\KeyboardSample.g.cs
 D:\Programme\GitHub\WPF-Keyboard\TestKeyboard\obj\Debug\Sample\KeyboardSample.baml
+D:\Programme\GitHub\WPF-Keyboard\TestKeyboard\obj\Debug\WPFKeyboard.csprojResolveAssemblyReference.cache

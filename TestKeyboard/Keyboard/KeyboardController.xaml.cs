@@ -72,10 +72,14 @@ namespace WPFKeyboard.Keyboard
             {
                 handleUpdateFocusedElement(focusedElement);
             }
-            if (this.focusedElement != null && this.focusedElement != focusedElement as TextBox)
+            else if (this.focusedElement != null && this.focusedElement != focusedElement as TextBox && focusedElement != null)
             {
                 handleUpdateFocusedElement(focusedElement);
-                
+            }
+            else if (this.focusedElement != null && focusedElement == null)
+            {
+                removeRegisteredEventsFromElement();
+                this.focusedElement = focusedElement as TextBox;
             }
             caret.update(this.focusedElement, "normal");
         }
@@ -114,9 +118,12 @@ namespace WPFKeyboard.Keyboard
          */
         private void registerEventOnElement()
         {
-            focusedElement.TouchUp += TextElement_TouchUp;
-            focusedElement.Loaded += TextElement_Loaded;
-            focusedElement.AddHandler(ScrollViewer.ScrollChangedEvent, new ScrollChangedEventHandler(TextElement_ScrollChanged));
+            if (focusedElement != null)
+            {
+                focusedElement.TouchUp += TextElement_TouchUp;
+                focusedElement.Loaded += TextElement_Loaded;
+                focusedElement.AddHandler(ScrollViewer.ScrollChangedEvent, new ScrollChangedEventHandler(TextElement_ScrollChanged));
+            } 
         }
 
         /*

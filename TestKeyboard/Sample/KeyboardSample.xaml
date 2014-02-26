@@ -19,7 +19,9 @@
 
         <Grid Width="450" Height="200" Background="Wheat">
             <Label Content="Text: " Margin="10,0,0,0" Foreground="Black"/>
-            <s:SurfaceTextBox Name="SampleTextBox" Text="Hallo" Focusable="False" FontSize="22" Margin="10, 25, 10, 25"
+            <s:SurfaceTextBox Name="SampleTextBox" Text="Hallo" Focusable="False" FontSize="22" Margin="10, 25, 10, 105"
+                     ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Auto" TextWrapping="WrapWithOverflow" TouchUp="TextBox_TouchUp"/>
+            <s:SurfaceTextBox Text="Hallo" Focusable="False" FontSize="22" Margin="10, 105, 10, 25"
                      ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Auto" TextWrapping="WrapWithOverflow" TouchUp="TextBox_TouchUp"/>
         </Grid>
         

@@ -24,7 +24,7 @@ namespace WPFKeyboard.Keyboard
     public partial class CustomKeyboard : UserControl
     {
 
-        private char[] smallLetters = new char[] { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'ä', 'ö', 'ü', 'ß', ',', '.', '?', '!'};
+        private char[] smallLetters = new char[] { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'ä', 'ö', 'ü', 'ß', ',', '.', '?', '!' };
         private char[] bigLetters = new char[] { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'Ä', 'Ö', 'Ü', 'ß', ';', ':', '-', '"' };
 
         private char[] digitsAndSymbols = new char[] { '!', '(', '"', '$', '3', '%', '&', '+', '8', '?', '/', '}', '-', ')', '9', '0', '1', '4', '@', '5', '7', '\'', '2', '_', '*', '6', '#', '{', '\\', '>', ':', ';', '<', '=' };
@@ -45,13 +45,13 @@ namespace WPFKeyboard.Keyboard
          * KeyboardController
          */
         private CustomKeyboardListener keyBoardController;
-        
+
         public CustomKeyboard()
         {
             InitializeComponent();
             areSmallLetters = true;
             areLetters = true;
-            initDispatcherTimer();   
+            initDispatcherTimer();
         }
 
         private void initDispatcherTimer()
@@ -74,7 +74,7 @@ namespace WPFKeyboard.Keyboard
 
             if (pressedButton.Name == "Shift1" || pressedButton.Name == "Shift2")
             {
-                
+
                 if (areSmallLetters)
                 {
                     changeLetterSize(buttons, bigLetters);
@@ -134,10 +134,10 @@ namespace WPFKeyboard.Keyboard
          */
         private void changeLetterSize(List<SurfaceButton> buttons, char[] keyArray)
         {
-            string[] delimiter = new string[] {"Key"};
+            string[] delimiter = new string[] { "Key" };
             SurfaceButton currentKey;
             int keyNumber;
-            
+
             for (int i = 0; i < buttons.Count; i++)
             {
                 currentKey = buttons[i];
@@ -149,7 +149,7 @@ namespace WPFKeyboard.Keyboard
                 }
                 if (keyNumber >= 0)
                 {
-                    currentKey.Content = keyArray[keyNumber];                  
+                    currentKey.Content = keyArray[keyNumber];
                 }
             }
         }
@@ -166,7 +166,7 @@ namespace WPFKeyboard.Keyboard
                 DependencyObject button = VisualTreeHelper.GetChild(this.KeyboardGrid, i);
                 if (button != null && button is SurfaceButton)
                 {
-                    buttons.Add((SurfaceButton) button);
+                    buttons.Add((SurfaceButton)button);
                 }
             }
             for (int i = 0; i < VisualTreeHelper.GetChildrenCount(this.SecondRow); i++)
@@ -187,24 +187,7 @@ namespace WPFKeyboard.Keyboard
          */
         private void Keys_PreviewTouchDown(object sender, TouchEventArgs e)
         {
-            if (e == null)
-            {
-                SurfaceButton pressedButton = sender as SurfaceButton;
-                handleTouchDown(pressedButton);
-            }
-            else if (e.TouchDevice.GetIsFingerRecognized())
-            {
-                SurfaceButton pressedButton = sender as SurfaceButton;
-                handleTouchDown(pressedButton);
-            }
-            else
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void handleTouchDown(SurfaceButton pressedButton)
-        {
+            SurfaceButton pressedButton = sender as SurfaceButton;
             keyBoardController.keyPressed(pressedButton);
 
             //after shift was pressed -> letters go small automatically
@@ -228,6 +211,8 @@ namespace WPFKeyboard.Keyboard
             dispatcherTimer.Start();
         }
 
+
+
         private void timer_Tick(object sender, EventArgs e)
         {
             Keys_PreviewTouchDown(dispatcherTimer.Tag, null);
@@ -235,20 +220,13 @@ namespace WPFKeyboard.Keyboard
 
         private void Keys_PreviewTouchEnded(object sender, TouchEventArgs e)
         {
-            if (e.TouchDevice.GetIsFingerRecognized())
-            {
-                /*
-                 * stop Timer
-                 */
-                dispatcherTimer.Tag = null;
-                dispatcherTimer.Stop();
-                dispatcherTimer.Interval = startInterval;
-                timerIsRunning = false;
-            }
-            else
-            {
-                e.Handled = true;
-            }
+            /*
+             * stop Timer
+             */
+            dispatcherTimer.Tag = null;
+            dispatcherTimer.Stop();
+            dispatcherTimer.Interval = startInterval;
+            timerIsRunning = false;
         }
 
 
@@ -257,37 +235,31 @@ namespace WPFKeyboard.Keyboard
          */
         private void Rect_TouchDown(object sender, TouchEventArgs e)
         {
-            if (e.TouchDevice.GetIsFingerRecognized())
-            {
-                string[] delimiter = { "Rect" };
-                string[] result = (sender as Rectangle).Name.Split(delimiter, StringSplitOptions.RemoveEmptyEntries);
-                string keyCode = result[0];
-                string keyPrefix = "Key";
+            string[] delimiter = { "Rect" };
+            string[] result = (sender as Rectangle).Name.Split(delimiter, StringSplitOptions.RemoveEmptyEntries);
+            string keyCode = result[0];
+            string keyPrefix = "Key";
 
-                if (keyCode == "BackSpace" || keyCode == "Space" || keyCode == "ArrowLeft" || keyCode == "ArrowRight")
-                {
-                    keyPrefix = "";
-                }
-                object button = this.KeyboardGrid.FindName(keyPrefix + keyCode);
-                if (button != null)
-                {
-                    Keys_PreviewTouchDown(button, null);
-                    e.Handled = true;
-                }
-            }
-            else
+            if (keyCode == "BackSpace" || keyCode == "Space" || keyCode == "ArrowLeft" || keyCode == "ArrowRight")
             {
+                keyPrefix = "";
+            }
+            object button = this.KeyboardGrid.FindName(keyPrefix + keyCode);
+            if (button != null)
+            {
+                Keys_PreviewTouchDown(button, null);
                 e.Handled = true;
             }
         }
 
         private void Rect_TouchUp(object sender, TouchEventArgs e)
         {
-            if (e.TouchDevice.GetIsFingerRecognized())
-            {
-                Keys_PreviewTouchEnded(null, e);
-            }
-            else
+            Keys_PreviewTouchEnded(null, e);
+        }
+
+        private void KeyboardGrid_PreviewTouchDown(object sender, TouchEventArgs e)
+        {
+            if (!e.TouchDevice.GetIsFingerRecognized())
             {
                 e.Handled = true;
             }
@@ -299,6 +271,6 @@ namespace WPFKeyboard.Keyboard
      */
     public interface CustomKeyboardListener
     {
-       void keyPressed(SurfaceButton pressedButton);
+        void keyPressed(SurfaceButton pressedButton);
     }
 }

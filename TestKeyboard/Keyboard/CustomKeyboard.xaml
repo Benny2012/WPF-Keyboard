@@ -40,7 +40,7 @@
 
  
     <Viewbox Stretch="Uniform">
-        <Grid Name="KeyboardGrid" MinWidth="350" MinHeight="109" Width="715" Height="220" Background="DarkGray" >
+        <Grid Name="KeyboardGrid" MinWidth="350" MinHeight="109" Width="715" Height="220" Background="DarkGray" PreviewTouchDown="KeyboardGrid_PreviewTouchDown">
             <Grid.RowDefinitions>
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>

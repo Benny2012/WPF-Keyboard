@@ -14,6 +14,7 @@ using System.Windows.Shapes;
 using Microsoft.Surface.Presentation.Controls;
 using Microsoft.Surface;
 using System.Windows.Threading;
+using Microsoft.Surface.Presentation.Input;
 
 namespace WPFKeyboard.Keyboard
 {
@@ -186,7 +187,24 @@ namespace WPFKeyboard.Keyboard
          */
         private void Keys_PreviewTouchDown(object sender, TouchEventArgs e)
         {
-            SurfaceButton pressedButton = sender as SurfaceButton;
+            if (e == null)
+            {
+                SurfaceButton pressedButton = sender as SurfaceButton;
+                handleTouchDown(pressedButton);
+            }
+            else if (e.TouchDevice.GetIsFingerRecognized())
+            {
+                SurfaceButton pressedButton = sender as SurfaceButton;
+                handleTouchDown(pressedButton);
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void handleTouchDown(SurfaceButton pressedButton)
+        {
             keyBoardController.keyPressed(pressedButton);
 
             //after shift was pressed -> letters go small automatically
@@ -217,13 +235,20 @@ namespace WPFKeyboard.Keyboard
 
         private void Keys_PreviewTouchEnded(object sender, TouchEventArgs e)
         {
-            /*
-             * stop Timer
-             */
-            dispatcherTimer.Tag = null;
-            dispatcherTimer.Stop();
-            dispatcherTimer.Interval = startInterval;
-            timerIsRunning = false;
+            if (e.TouchDevice.GetIsFingerRecognized())
+            {
+                /*
+                 * stop Timer
+                 */
+                dispatcherTimer.Tag = null;
+                dispatcherTimer.Stop();
+                dispatcherTimer.Interval = startInterval;
+                timerIsRunning = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
         }
 
 
@@ -232,33 +257,40 @@ namespace WPFKeyboard.Keyboard
          */
         private void Rect_TouchDown(object sender, TouchEventArgs e)
         {
-            
-            string[] delimiter = {"Rect"};
-            string[] result = (sender as Rectangle).Name.Split(delimiter, StringSplitOptions.RemoveEmptyEntries);
-            string keyCode = result[0];
-            string keyPrefix = "Key";
+            if (e.TouchDevice.GetIsFingerRecognized())
+            {
+                string[] delimiter = { "Rect" };
+                string[] result = (sender as Rectangle).Name.Split(delimiter, StringSplitOptions.RemoveEmptyEntries);
+                string keyCode = result[0];
+                string keyPrefix = "Key";
 
-            if (keyCode == "BackSpace" || keyCode == "Space" || keyCode == "ArrowLeft" || keyCode == "ArrowRight")
-            {
-                keyPrefix = "";
+                if (keyCode == "BackSpace" || keyCode == "Space" || keyCode == "ArrowLeft" || keyCode == "ArrowRight")
+                {
+                    keyPrefix = "";
+                }
+                object button = this.KeyboardGrid.FindName(keyPrefix + keyCode);
+                if (button != null)
+                {
+                    Keys_PreviewTouchDown(button, null);
+                    e.Handled = true;
+                }
             }
-            object button = this.KeyboardGrid.FindName(keyPrefix + keyCode);
-            if (button != null)
+            else
             {
-                Keys_PreviewTouchDown(button, null);
                 e.Handled = true;
             }
-
-            
-            //does not fire "real" touchevent
-            //SurfaceButton button = (SurfaceButton) this.KeyboardGrid.FindName("Key" + keyCode);
-            //button.RaiseEvent(new TouchEventArgs(e.TouchDevice, e.Timestamp) {RoutedEvent = Button.PreviewTouchDownEvent});
-
         }
 
         private void Rect_TouchUp(object sender, TouchEventArgs e)
         {
-            Keys_PreviewTouchEnded(null, null);
+            if (e.TouchDevice.GetIsFingerRecognized())
+            {
+                Keys_PreviewTouchEnded(null, e);
+            }
+            else
+            {
+                e.Handled = true;
+            }
         }
     }
 
